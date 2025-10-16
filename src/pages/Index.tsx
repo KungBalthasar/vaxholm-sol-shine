@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { Process } from "@/components/Process";
@@ -17,6 +18,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Header onContactClick={scrollToContact} />
       <Hero onCTAClick={scrollToContact} />
       <Services />
       <Process />

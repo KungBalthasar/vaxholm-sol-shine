@@ -13,9 +13,9 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Kontakt</h4>
             <div className="space-y-2 text-sm text-primary-foreground/80">
-              <p>📧 charlie@twiston.se</p>
-              <p>📞 070 386 6696</p>
-              <p>📍 Campusgränd 1, Vaxholm</p>
+              <p>charlie@twiston.se</p>
+              <p>070 386 6696</p>
+              <p>Campusgränd 1, Vaxholm</p>
             </div>
           </div>
 

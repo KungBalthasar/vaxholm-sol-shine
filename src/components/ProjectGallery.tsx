@@ -3,17 +3,15 @@ import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
+import projectVaxholm from "@/assets/project-vaxholm.jpg";
+import projectTaby from "@/assets/project-taby.jpg";
+import projectResaro from "@/assets/project-resaro.jpg";
 
 type ProjectType = "Hem" | "BRF" | "Företag";
 
 interface Project {
   image: string;
   location: string;
-  size: string;
   year: string;
   type: ProjectType;
   battery: boolean;
@@ -23,9 +21,8 @@ interface Project {
 
 const projects: Project[] = [
   {
-    image: project1,
+    image: projectVaxholm,
     location: "Vaxholm",
-    size: "6.4 kW",
     year: "2024",
     type: "Hem",
     battery: true,
@@ -33,34 +30,22 @@ const projects: Project[] = [
     panelType: "Premium Black 400W",
   },
   {
-    image: project2,
-    location: "Vaxholm Centrum",
-    size: "24 kW",
-    year: "2023",
-    type: "BRF",
-    battery: false,
-    roofType: "Plåttak",
-    panelType: "High-Efficiency 450W",
-  },
-  {
-    image: project3,
-    location: "Resarö",
-    size: "48 kW",
-    year: "2024",
-    type: "Företag",
-    battery: true,
-    roofType: "Plåttak",
-    panelType: "Commercial 500W",
-  },
-  {
-    image: project4,
-    location: "Vaxholm",
-    size: "8.8 kW",
+    image: projectTaby,
+    location: "Täby",
     year: "2024",
     type: "Hem",
     battery: true,
     roofType: "Betongpannor",
     panelType: "Premium Black 400W",
+  },
+  {
+    image: projectResaro,
+    location: "Resarö",
+    year: "2024",
+    type: "Företag",
+    battery: true,
+    roofType: "Plåttak",
+    panelType: "Commercial 500W",
   },
 ];
 
@@ -75,7 +60,7 @@ export const ProjectGallery = () => {
   });
 
   return (
-    <section className="py-20 md:py-32 bg-secondary/30">
+    <section id="projekt" className="py-20 md:py-32 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-foreground mb-4">Våra projekt</h2>
@@ -124,8 +109,7 @@ export const ProjectGallery = () => {
                   <h4 className="font-semibold text-foreground">{project.location}</h4>
                   <span className="text-sm text-muted-foreground">{project.year}</span>
                 </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">{project.size}</span>
+                <div className="flex items-center justify-end text-sm">
                   <span className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">
                     {project.type}
                   </span>
@@ -158,9 +142,6 @@ export const ProjectGallery = () => {
                     <div>
                       <h3 className="text-2xl font-semibold mb-4">{selectedProject.location}</h3>
                       <div className="space-y-2 text-muted-foreground">
-                        <p>
-                          <strong className="text-foreground">System:</strong> {selectedProject.size}
-                        </p>
                         <p>
                           <strong className="text-foreground">Paneltyp:</strong> {selectedProject.panelType}
                         </p>
