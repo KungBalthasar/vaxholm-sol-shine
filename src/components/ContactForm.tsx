@@ -192,9 +192,9 @@ export const ContactForm = () => {
 
         {/* Contact Info */}
         <div className="max-w-2xl mx-auto mt-12 text-center space-y-2 text-muted-foreground">
-          <p>📧 charlie@twiston.se</p>
-          <p>📞 070 386 6696</p>
-          <p>📍 Campusgränd 1, Vaxholm</p>
+          <p>charlie@twiston.se</p>
+          <p>070 386 6696</p>
+          <p>Campusgränd 1, Vaxholm</p>
         </div>
       </div>
     </section>
